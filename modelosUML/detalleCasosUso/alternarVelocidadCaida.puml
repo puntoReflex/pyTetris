@@ -1,0 +1,41 @@
+@startuml alternarVelocidadCaida
+
+skinparam linetype polyline
+
+EN_CURSO -[#green]-> alternarVelocidadCaida
+note on link
+alternarVelocidadCaida()
+end note
+
+state alternarVelocidadCaida as "alternarVelocidadCaida()" {
+
+    state c1 <<choice>>
+
+    [*] -[#green]-> c1
+    note on link
+    <b>Jugador</b> solicita alternar velocidad de caída
+    end note
+
+    c1 -[#green]-> [*]
+    note on link
+    velocidad normal activa
+    <b>Sistema</b> presenta pieza activa
+    descendiendo a velocidad acelerada
+    end note
+
+    c1 -[#blue]-> [*]
+    note on link
+    velocidad acelerada activa
+    <b>Sistema</b> presenta pieza activa
+    descendiendo a velocidad normal
+    end note
+}
+
+state EN_CURSO_2 as "EN_CURSO"
+
+alternarVelocidadCaida -[#green]-> EN_CURSO_2
+note on link
+velocidad alternada
+end note
+
+@enduml

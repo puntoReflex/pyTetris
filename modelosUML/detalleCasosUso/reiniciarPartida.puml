@@ -1,0 +1,69 @@
+@startuml reiniciarPartida
+
+skinparam linetype polyline
+
+EN_CURSO -[#blue]-> reiniciarPartida
+note on link
+reiniciarPartida()
+end note
+
+FINALIZADO -[#green]-> reiniciarPartida
+note on link
+reiniciarPartida()
+end note
+
+state reiniciarPartida as "reiniciarPartida()" {
+
+    state " " as SolicitandoReinicio
+    state " " as ConfirmandoReinicio
+    state c1 <<choice>>
+
+    [*] -[#green]-> SolicitandoReinicio
+    note on link
+    <b>Jugador</b> solicita reiniciar partida
+    end note
+
+    SolicitandoReinicio -[#green]-> ConfirmandoReinicio
+    note on link
+    <b>Sistema</b> presenta mensaje de confirmación
+    <b>Sistema</b> permite solicitar:
+    • confirmar reinicio
+    • cancelar reinicio
+    end note
+
+    ConfirmandoReinicio -[#green]-> c1
+    note on link
+    <b>Jugador</b> responde a confirmación
+    end note
+
+    c1 -[#green]-> [*]
+    note on link
+    confirmación aceptada
+    <b>Sistema</b> limpia estado de partida
+    end note
+
+    c1 -[#blue]-> [*]
+    note on link
+    confirmación cancelada
+    end note
+}
+
+state EN_CURSO_2 as "EN_CURSO"
+state FINALIZADO_2 as "FINALIZADO"
+
+reiniciarPartida -[#green]-> INACTIVO
+note on link
+partida reiniciada
+end note
+
+reiniciarPartida -[#blue]-> EN_CURSO_2
+note on link
+reinicio cancelado
+end note
+
+reiniciarPartida -[#blue]-> FINALIZADO_2
+note on link
+reinicio cancelado
+end note
+
+@enduml
