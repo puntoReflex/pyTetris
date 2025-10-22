@@ -2,7 +2,7 @@
 
 ## ¿Por qué?
 
-En la enseñanza de ingeniería de software se presenta un problema persistente: los estudiantes aprenden a memorizar código, pero no comprenden el proceso de pensamiento que lleva a ese código. La situación problemática típica se manifiesta cuando un alumno se enfrenta a un nuevo proyecto y pregunta: **"¿Por dónde empiezo?"**. Esta pregunta revela que ha aprendido soluciones específicas, pero no el método general para crear soluciones.
+En la enseñanza de ingeniería de software se presenta un problema persistente: los estudiantes aprenden a memorizar código, pero no comprenden el proceso de pensamiento que lleva a ese código. La situación problemática típica se manifiesta cuando un alumno se enfrenta a un nuevo proyecto y pregunta: **"[¿Por dónde empiezo?](https://github.com/mmasias/IdSw1/blob/main/temario/2think.md)"**. Esta pregunta revela que ha aprendido soluciones específicas, pero no el método general para crear soluciones.
 
 El problema se intensifica porque la mayoría de recursos educativos presentan el resultado final sin mostrar el camino. Se enseña el "qué" (aquí está el código del Tetris) pero se omite el "cómo" (cómo se llegó a diseñar ese código) y especialmente el "por qué" (por qué se tomaron esas decisiones específicas).
 
