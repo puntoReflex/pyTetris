@@ -48,6 +48,14 @@ La implementación práctica de este enfoque requiere inversión deliberada en d
 
 Cada fase del desarrollo se documenta exhaustivamente, no solo mostrando las decisiones tomadas sino explicando el razonamiento subyacente. Se incluyen las alternativas consideradas y los criterios utilizados para la selección final.
 
+<div align=center>
+
+|Observar||Conceptualizar||Decidir||Construir||Ejecutar|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|[Modelo del dominio](/docs/modeloDelDominio.md)|>>|[***Requisitos***](/docs/ProcesoRequisitos.md)|>>|[Análisis](/docs/ProcesoAnalisis.md)|>>|[Decisiones tecnológicas](/docs/DecisionesTecnologicas.md)|>>|[Diseño](/docs/ProcesoDiseño.md)|>>|[Código](/src/)
+
+</div>
+
 El proyecto utiliza diagramas UML para visualizar la progresión conceptual, permitiendo a los estudiantes ver cómo los conceptos abstractos se materializan gradualmente en estructuras de código concretas.
 
 Se mantiene un vocabulario consistente a lo largo de todo el proceso, facilitando el seguimiento de conceptos desde su origen en el dominio hasta su implementación final.
