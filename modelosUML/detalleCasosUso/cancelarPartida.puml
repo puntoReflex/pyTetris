@@ -1,0 +1,69 @@
+@startuml cancelarPartida
+
+skinparam linetype polyline
+
+EN_CURSO -[#blue]-> cancelarPartida
+note on link
+cancelarPartida()
+end note
+
+FINALIZADO -[#green]-> cancelarPartida
+note on link
+cancelarPartida()
+end note
+
+state cancelarPartida as "cancelarPartida()" {
+
+    state " " as SolicitandoCancelación
+    state " " as ConfirmandoCancelación
+    state c1 <<choice>>
+
+    [*] -[#green]-> SolicitandoCancelación
+    note on link
+    <b>Jugador</b> solicita cancelar partida
+    end note
+
+    SolicitandoCancelación -[#green]-> ConfirmandoCancelación
+    note on link
+    <b>Sistema</b> presenta mensaje de confirmación
+    <b>Sistema</b> permite solicitar:
+    • cancelar partida
+    • reanudar partida
+    end note
+
+    ConfirmandoCancelación -[#green]-> c1
+    note on link
+    <b>Jugador</b> responde a confirmación
+    end note
+
+    c1 -[#green]-> [*]
+    note on link
+    confirmación aceptada
+    <b>Sistema</b> limpia estado de partida
+    end note
+
+    c1 -[#blue]-> [*]
+    note on link
+    confirmación cancelada
+    end note
+}
+
+state EN_CURSO_2 as "EN_CURSO"
+state FINALIZADO_2 as "FINALIZADO"
+
+cancelarPartida -[#green]-> INACTIVO
+note on link
+partida cancelada
+end note
+
+cancelarPartida -[#blue]-> EN_CURSO_2
+note on link
+reanudando partida
+end note
+
+cancelarPartida -[#blue]-> FINALIZADO_2
+note on link
+reanudando partida
+end note
+
+@enduml

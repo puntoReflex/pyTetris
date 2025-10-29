@@ -123,9 +123,9 @@ Del modelo del dominio surge:
 
 <div align=center>
 
-|![](/images/modelosUML/detalleCasosUso/reiniciarPartida.svg)
+|![](/images/modelosUML/detalleCasosUso/cancelarPartida.svg)
 |:-:
-|[Código plantUML](/modelosUML/detalleCasosUso/reiniciarPartida.puml)
+|[Código plantUML](/modelosUML/detalleCasosUso/cancelarPartida.puml)
 
 </div>
 
