@@ -46,7 +46,7 @@ Del modelo del dominio surge:
 |-|:-:|
 |arrancarSistema()|Jugador |
 |iniciarPartida()|Jugador |
-|reiniciarPartida()|Jugador |
+|cancelarPartida()|Jugador |
 |moverPieza()|Jugador
 |rotarPieza()|Jugador
 |alternarVelocidadCaida()|Jugador
@@ -119,13 +119,13 @@ Del modelo del dominio surge:
 
 </div>
 
-#### reiniciarPartida()
+#### cancelarPartida()
 
 <div align=center>
 
-|![](/images/modelosUML/detalleCasosUso/reiniciarPartida.svg)
+|![](/images/modelosUML/detalleCasosUso/cancelarPartida.svg)
 |:-:
-|[Código plantUML](/modelosUML/detalleCasosUso/reiniciarPartida.puml)
+|[Código plantUML](/modelosUML/detalleCasosUso/cancelarPartida.puml)
 
 </div>
 
@@ -180,6 +180,6 @@ Para los demás casos de uso:
 - iniciarPartida(): arranca el juego → se ve el tablero
 - descenderPieza(): automático, se ve la pieza bajando
 - alternarVelocidadCaida(): la pieza cae más rápido (observable en velocidad)
-- reiniciarPartida(): vuelve al inicio
+- cancelarPartida(): vuelve al inicio
 
 Todo está implícito y claro con esa única imagen: agregar más sería redundante.

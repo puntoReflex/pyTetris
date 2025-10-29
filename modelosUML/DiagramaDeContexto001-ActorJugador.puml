@@ -14,9 +14,13 @@ EnCurso -> EnCurso : moverPieza()
 EnCurso -> EnCurso : rotarPieza()
 EnCurso -> EnCurso : alternarVelocidadCaida()
 
-EnCurso --> Finalizado
-EnCurso --> Inactivo : reiniciarPartida()
+EnCurso -> EnCurso : iniciarPartida()
 
-Finalizado --> Inactivo : reiniciarPartida()
+EnCurso --> Finalizado
+EnCurso --> Inactivo : cancelarPartida()
+
+Finalizado --> Inactivo : cancelarPartida()
+
+Finalizado --> EnCurso : iniciarPartida()
 
 @enduml

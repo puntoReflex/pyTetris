@@ -6,6 +6,14 @@ skinparam linetype polyline
   note on link
   iniciarPartida()
   end note
+  EN_CURSO -[#green]-> iniciarPartida
+  note on link
+  iniciarPartida()
+  end note
+  FINALIZADO -[#green]-> iniciarPartida
+  note on link
+  iniciarPartida()
+  end note
 
 state iniciarPartida as "iniciarPartida()" {
 
